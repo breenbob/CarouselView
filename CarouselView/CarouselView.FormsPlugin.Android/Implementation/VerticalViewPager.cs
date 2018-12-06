@@ -62,6 +62,11 @@ namespace CarouselView.FormsPlugin.Android
             this.isSwipeEnabled = enabled;
         }
 
+        public void SetContentWrapEnabled(bool enabled)
+        {
+            // Do nothing - not required on vertical
+        }
+
         public void SetElement(CarouselViewControl element)
         {
             this.Element = element;

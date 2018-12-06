@@ -460,6 +460,15 @@ namespace CarouselView.FormsPlugin.iOS
             }
         }
 
+	    public override void LayoutSubviews()
+	    {
+	        if (Element.IsContentWrapEnabled)
+	        {
+                // Looking at NSAutoLayoutConstraints defined lower down I don't think this is going to be necessary.
+                //pageController.View.Frame = CGRect.FromLTRB(0, 0, ??, ??);
+	        }
+	    }
+
         void SetPosition()
         {
             isChangingPosition = true;

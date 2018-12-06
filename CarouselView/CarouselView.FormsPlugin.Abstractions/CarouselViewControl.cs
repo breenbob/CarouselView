@@ -35,9 +35,17 @@ namespace CarouselView.FormsPlugin.Abstractions
 		{
 			get { return (bool)GetValue(IsSwipeEnabledProperty); }
 			set { SetValue(IsSwipeEnabledProperty, value); }
-		}
+	    }
 
-		public static readonly BindableProperty IndicatorsTintColorProperty = BindableProperty.Create("IndicatorsTintColor", typeof(Color), typeof(CarouselViewControl), Color.Silver);
+	    public static readonly BindableProperty IsContentWrapEnabledProperty = BindableProperty.Create("IsContentWrapEnabled", typeof(bool), typeof(CarouselViewControl), true);
+
+	    public bool IsContentWrapEnabled
+        {
+	        get { return (bool)GetValue(IsContentWrapEnabledProperty); }
+	        set { SetValue(IsContentWrapEnabledProperty, value); }
+	    }
+
+        public static readonly BindableProperty IndicatorsTintColorProperty = BindableProperty.Create("IndicatorsTintColor", typeof(Color), typeof(CarouselViewControl), Color.Silver);
 
 		public Color IndicatorsTintColor
 		{

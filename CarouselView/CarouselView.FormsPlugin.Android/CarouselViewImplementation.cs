@@ -256,6 +256,9 @@ namespace CarouselView.FormsPlugin.Android
                 case "IsSwipeEnabled":
                     SetIsSwipeEnabled();
                     break;
+                case "IsContentWrapEnabled":
+                    SetIsContentWrapEnabled();
+                    break;
                 case "IndicatorsTintColor":
                     indicators?.SetFillColor(Element.IndicatorsTintColor.ToAndroid());
                     break;
@@ -423,6 +426,9 @@ namespace CarouselView.FormsPlugin.Android
             // IsSwipeEnabled BP
             SetIsSwipeEnabled();
 
+            // IsContentWrapEnabled BP
+            SetIsContentWrapEnabled();
+
             // TapGestureRecognizer doesn't work when added to CarouselViewControl (Android) #66, #191, #200
             ((IViewPager)viewPager)?.SetElement(Element);
             
@@ -439,6 +445,11 @@ namespace CarouselView.FormsPlugin.Android
         void SetIsSwipeEnabled()
         {
             ((IViewPager)viewPager)?.SetPagingEnabled(Element.IsSwipeEnabled);
+        }
+
+        void SetIsContentWrapEnabled()
+        {
+            ((IViewPager)viewPager)?.SetContentWrapEnabled(Element.IsContentWrapEnabled);
         }
 
         void SetPosition()

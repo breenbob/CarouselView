@@ -29,7 +29,8 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: Alexander Reyes (T3VKUDC3C3)</CodesignKey>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -106,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>

@@ -234,6 +234,9 @@ namespace CarouselView.FormsPlugin.UWP
                 case "IsSwipeEnabled":
                     nativeView.IsSwipeEnabled = Element.IsSwipeEnabled;
                     break;
+                case "IsContentWrapEnabled":
+                    // Do nothing - already works natively in UWP
+                    break;
                 case "IndicatorsTintColor":
                     fillColor = (SolidColorBrush)converter.Convert(Element.IndicatorsTintColor, null, null, null);
                     UpdateIndicatorsTint();

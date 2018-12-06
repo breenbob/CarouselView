@@ -7,12 +7,14 @@ using Android.Util;
 using Android.Views;
 using CarouselView.FormsPlugin.Abstractions;
 using Xamarin.Forms;
+using View = Android.Views.View;
 
 namespace CarouselView.FormsPlugin.Android
 {
     public class HorizontalViewPager : ViewPager, IViewPager
 	{
         private bool isSwipeEnabled = true;
+	    private bool isContentWrapEnabled = true;
         private CarouselViewControl Element;
 
         // Fix for #171 System.MissingMethodException: No constructor found
@@ -57,11 +59,37 @@ namespace CarouselView.FormsPlugin.Android
 
             return false;
         }
+        protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
+	    {
+	        if (isContentWrapEnabled)
+	        {
+	            // Forces the ViewPager to act like layout_height="wrap_content" for the current page's content height
+	            int height = 0;
+	            if (ChildCount > CurrentItem)
+	            {
+	                View child = GetChildAt(CurrentItem);
+	                child.Measure(widthMeasureSpec, MeasureSpec.MakeMeasureSpec(0, MeasureSpecMode.Unspecified));
+
+	                int h = child.MeasuredHeight;
+	                if (h > height) height = h;
+	            }
+
+	            heightMeasureSpec = MeasureSpec.MakeMeasureSpec(height, MeasureSpecMode.Exactly);
+
+	        }
+
+	        base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
+	    }
 
         public void SetPagingEnabled(bool enabled)
         {
             this.isSwipeEnabled = enabled;
         }
+
+	    public void SetContentWrapEnabled(bool enabled)
+	    {
+	        this.isContentWrapEnabled = enabled;
+	    }
 
         public void SetElement(CarouselViewControl element)
         {
