@@ -1,0 +1,14 @@
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\CarouselView.FormsPlugin.Abstractions.dll
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\CarouselView.FormsPlugin.Abstractions.pdb
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\Xamarin.Forms.Core.dll
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\Xamarin.Forms.Platform.dll
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\Xamarin.Forms.Core.pdb
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\Xamarin.Forms.Core.xml
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\obj\Debug\CarouselView.FormsPlugin.Abstractions.Portable.csprojAssemblyReference.cache
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\obj\Debug\CarouselView.FormsPlugin.Abstractions.Portable.csproj.CoreCompileInputs.cache
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\obj\Debug\CarouselView.FormsPlugin.Abstractions.Portable.csproj.CopyComplete
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\obj\Debug\CarouselView.FormsPlugin.Abstractions.dll
+C:\DevOps\GitHub Forks\CarouselView\CarouselView\CarouselView.FormsPlugin.Abstractions.Portable\obj\Debug\CarouselView.FormsPlugin.Abstractions.pdb

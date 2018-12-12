@@ -650,12 +650,13 @@ namespace CarouselView.FormsPlugin.Android
 
         #region adapter
 
-        class PageAdapter : PagerAdapter
+        class PageAdapter : PagerAdapter, ObjectAtPositionInterface
         {
             CarouselViewControl Element;
 
             // A local copy of ItemsSource so we can use CollectionChanged events
             public List<object> Source;
+            public List<Java.Lang.Object> NativeSource = new List<Java.Lang.Object>();
 
             //string TAG_VIEWS = "TAG_VIEWS";
             //SparseArray<Parcelable> mViewStates = new SparseArray<Parcelable>();
@@ -727,6 +728,8 @@ namespace CarouselView.FormsPlugin.Android
                 //if (dt == null && view == null)
                 //formsView.Parent = null;
 
+                NativeSource.Add(nativeConverted);
+
                 var pager = (ViewPager)container;
                 pager.AddView(nativeConverted);
 
@@ -740,6 +743,7 @@ namespace CarouselView.FormsPlugin.Android
                 //view.SaveEnabled = true;
                 //view.SaveHierarchyState(mViewStates);
                 pager.RemoveView(view);
+                NativeSource.RemoveAt(position);
                 //[Android] Out of memories(FFImageLoading + CarouselView) #279
                 view.Dispose();
             }
@@ -749,6 +753,11 @@ namespace CarouselView.FormsPlugin.Android
                 var tag = (Tag)((AViews.View)@object).Tag;
                 var position = Source.IndexOf(tag.BindingContext);
                 return position != -1 ? position : PositionNone;
+            }
+
+            public Java.Lang.Object getObjectAtPosition(int position)
+            {
+                return NativeSource.ElementAt(position);
             }
 
             /*public override IParcelable SaveState()
